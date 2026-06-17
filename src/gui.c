@@ -972,7 +972,9 @@ static void body_about(struct window *win)
     ksprintf(buf, sizeof buf, "%lu KiB used of %lu MiB RAM", claimed >> 10, total >> 20);
     about_center(cx, y, buf, COL_MUTED, 1); y += 20;
 
-    about_center(cx, y, "Built with Claude.", COL_MUTED, 1);
+    about_center(cx, y, "MicroOS was built by Omar Hamama",   COL_WIN_TEXT, 1); y += 14;
+    about_center(cx, y, "as a from-scratch learning project",  COL_MUTED, 1);    y += 14;
+    about_center(cx, y, "(with the help of Claude).",          COL_MUTED, 1);
 }
 
 /* ---- the menu bar's dropdown menus (, File, Edit, Window) ---------- */
