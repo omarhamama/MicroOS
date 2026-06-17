@@ -136,7 +136,7 @@ two CPU cores at once.
 - a **web browser** (the Browser window): fetches **HTTP and HTTPS**
   pages over the kernel's own TCP/TLS stack ([http.c](src/http.c)), parses
   a subset of HTML ([browser.c](src/browser.c)), renders it in a real
-  **proportional font** ([propfont.c](src/propfont.c), Verdana rasterised
+  **proportional font** ([propfont.c](src/propfont.c), Noto Sans rasterised
   to bitmaps — not the 8x8 blocks) with word-wrap and headings, makes
   **links clickable**, **scrolls**
   (mouse wheel or arrow / Page keys, with a scrollbar), and has an

@@ -22,20 +22,25 @@ so the project can be used and redistributed honestly.
   Amazon) plus a local test root. These are the same certificates shipped
   in every operating system and browser trust store; they are public.
 
-## Fonts (please read before redistributing binaries)
+## Fonts
 
-The bitmap fonts were **rasterized from system fonts** for this educational
-project:
+The bitmap fonts are rasterized from **free / open-source fonts**, so the
+generated tables are freely redistributable:
 
-- [src/propfont.c](src/propfont.c) — generated from **Verdana** (13 px)
-- [src/arabicfont.c](src/arabicfont.c) — generated from **Geeza Pro**
+- [src/propfont.c](src/propfont.c) — proportional Latin, generated from
+  **Noto Sans** (14 px)
+- [src/arabicfont.c](src/arabicfont.c) — Arabic presentation forms,
+  generated from **Noto Sans Arabic** (15 px)
 - the built-in 8x8 font is original.
 
-Verdana and Geeza Pro are proprietary fonts (Microsoft / Apple). The small
-bitmap rasterizations are included here purely for educational use. If you
-redistribute MicroOS in a context where that matters, regenerate these
-tables from an open font (e.g. DejaVu, Noto) with `test/gen_propfont.py`
-and `test/gen_arabicfont.py`.
+**Noto Sans** and **Noto Sans Arabic** are licensed under the
+[SIL Open Font License 1.1](https://openfontlicense.org) (© The Noto
+Project Authors / Google) — a free/libre license that explicitly permits
+embedding and redistribution. The small bitmap tables here are derived
+works of those fonts and are covered by the OFL; MicroOS itself remains
+MIT. You can regenerate the tables from any free font with
+`test/gen_propfont.py` and `test/gen_arabicfont.py` (set
+`MICROOS_LATIN_FONT` / `MICROOS_ARABIC_FONT` to point at your `.ttf`).
 
 ## Sample media
 
